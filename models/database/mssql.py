@@ -5,10 +5,6 @@ class Database():
     def __init__(self, connection)  -> None:
         self.connection = connection
 
-    def set_connection(self, connection):
-        connection.setencoding(encoding='utf-8')
-        return connection
-
     def query(self, sql):
         cursor = self.connection.cursor()
         cursor.execute(sql)
